@@ -1,0 +1,26 @@
+flowchart LR
+    Start([dispatcher- fresh])
+    Trigger[UiPath Trigger -queue]
+    GetTicket[Get Ticket Details]
+    Agent[LangGraph Agent]
+    DecisionRoute{Agent Decision}
+
+    ITAction[IT Action Match]
+    StudioWorkflow[Studio Workflow]
+
+    SelfService[Self-Service Response]
+    ITExec[IT Execution Response]
+
+    ConfCheck{Confidence Score}
+    AutoPublish[Auto-Publish]
+    HITL[Action Center Human Review]
+
+    Memory[Store in Confluence]
+    End([Complete])
+
+    Start --> Trigger --> GetTicket --> Agent --> DecisionRoute
+    DecisionRoute -->|IT Action| ITAction --> StudioWorkflow --> Memory --> End
+    DecisionRoute -->|Self-Service| SelfService --> ConfCheck
+    DecisionRoute -->|IT Execution| ITExec --> ConfCheck
+    ConfCheck -->|High| AutoPublish --> End
+    ConfCheck -->|Low| HITL --> AutoPublish
