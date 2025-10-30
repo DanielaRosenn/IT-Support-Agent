@@ -9,14 +9,14 @@ An intelligent IT support agent built with **UiPath LangGraph SDK** that autonom
 - Intelligently loops back to internal KB when web search identifies specific topics
 - Iterative refinement with gap analysis (max 2 iterations)
 
-### **Semantic Article Filtering (NEW)**
+### **Semantic Article Filtering **
 - LLM-based relevance scoring for FreshDesk articles
 - Adaptive logic:
   - **≤5 articles**: Keep only those with score ≥ 0.7
   - **>5 articles**: Sort by score, keep top 5
 - Reduces noise from keyword-only search
 
-### **Self-Service Detection (NEW)**
+### **Self-Service Detection **
 - LLM evaluates if user can self-service the issue
 - Generates appropriate response type:
   - **Client-facing instructions** (self-service)
@@ -379,3 +379,4 @@ For issues, questions, or feature requests:
 - **UiPath** - For LangGraph SDK and Chat models
 - **Anthropic** - For Claude AI models
 - **DuckDuckGo** - For web search API
+
