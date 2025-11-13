@@ -1,0 +1,230 @@
+{
+    "entryPoints": [
+        {
+            "filePath": "agent",
+            "uniqueId": "2363ae4f-9dcc-47e7-a6dd-e1e44e3082a0",
+            "type": "agent",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "ticket_id": {
+                        "title": "Ticket Id",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "ticket_id"
+                ]
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "ticket_id": {
+                        "default": null,
+                        "title": "Ticket Id",
+                        "type": "string"
+                    },
+                    "ticket_info": {
+                        "description": "Model for ticket information returned from UiPath job (dynamically generated from config)",
+                        "properties": {
+                            "ticket_id": {
+                                "title": "Ticket Id",
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "category": {
+                                "type": "string"
+                            },
+                            "subject": {
+                                "type": "string"
+                            },
+                            "requester": {
+                                "type": "string"
+                            },
+                            "requester_email": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "ticket_id"
+                        ],
+                        "title": "TicketInfo",
+                        "type": "object"
+                    },
+                    "memory_results": {
+                        "default": null,
+                        "items": {
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "title": "Memory Results",
+                        "type": "array"
+                    },
+                    "it_action_match": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "It Action Match",
+                        "type": "object"
+                    },
+                    "is_it_action_match": {
+                        "default": null,
+                        "title": "Is It Action Match",
+                        "type": "boolean"
+                    },
+                    "ticket_information": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Ticket Information",
+                        "type": "object"
+                    },
+                    "missing_information": {
+                        "default": null,
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Missing Information",
+                        "type": "array"
+                    },
+                    "clarifying_questions": {
+                        "default": null,
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Clarifying Questions",
+                        "type": "array"
+                    },
+                    "can_proceed_with_it_action": {
+                        "default": null,
+                        "title": "Can Proceed With It Action",
+                        "type": "boolean"
+                    },
+                    "freshservice_articles": {
+                        "default": null,
+                        "items": {
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "title": "Freshservice Articles",
+                        "type": "array"
+                    },
+                    "context_grounding_results": {
+                        "default": null,
+                        "items": {
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "title": "Context Grounding Results",
+                        "type": "array"
+                    },
+                    "knowledge_sufficiency": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Knowledge Sufficiency",
+                        "type": "object"
+                    },
+                    "web_search_resolution": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Web Search Resolution",
+                        "type": "object"
+                    },
+                    "web_search_topics": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Web Search Topics",
+                        "type": "object"
+                    },
+                    "missing_information_check": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Missing Information Check",
+                        "type": "object"
+                    },
+                    "augmentation_iteration": {
+                        "default": null,
+                        "title": "Augmentation Iteration",
+                        "type": "integer"
+                    },
+                    "augmentation_source": {
+                        "default": null,
+                        "title": "Augmentation Source",
+                        "type": "string"
+                    },
+                    "web_search_results": {
+                        "default": null,
+                        "items": {
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "title": "Web Search Results",
+                        "type": "array"
+                    },
+                    "claude_knowledge": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Claude Knowledge",
+                        "type": "object"
+                    },
+                    "final_sufficiency": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Final Sufficiency",
+                        "type": "object"
+                    },
+                    "draft_response": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Draft Response",
+                        "type": "object"
+                    },
+                    "response_evaluation": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Response Evaluation",
+                        "type": "object"
+                    },
+                    "ticket_response": {
+                        "default": null,
+                        "title": "Ticket Response",
+                        "type": "string"
+                    },
+                    "it_solution_steps": {
+                        "default": null,
+                        "title": "It Solution Steps",
+                        "type": "string"
+                    },
+                    "it_further_investigation_actions": {
+                        "default": null,
+                        "title": "It Further Investigation Actions",
+                        "type": "string"
+                    },
+                    "final_output": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Final Output",
+                        "type": "object"
+                    },
+                    "llm_costs": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Llm Costs",
+                        "type": "object"
+                    },
+                    "metadata": {
+                        "additionalProperties": true,
+                        "default": null,
+                        "title": "Metadata",
+                        "type": "object"
+                    }
+                },
+                "required": []
+            }
+        }
+    ],
+    "bindings": {
+        "version": "2.0",
+        "resources": []
+    }
+}

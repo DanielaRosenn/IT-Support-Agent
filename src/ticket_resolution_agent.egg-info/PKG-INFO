@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: ticket-resolution-agent
+Version: 0.0.19
+Summary: ticket-resolution-agent
+Author-email: Daniela Rosenstein <daniela.rosenstein@catonetworks.com>
+Requires-Python: <4.0,>=3.10
+Requires-Dist: langchain==0.3.27
+Requires-Dist: langchain-anthropic>=0.3.8
+Requires-Dist: langchain-aws>=0.2.29
+Requires-Dist: langchain-community>=0.3.27
+Requires-Dist: langchain-core>=0.3.72
+Requires-Dist: langgraph>=0.2.0
+Requires-Dist: boto3>=1.28.0
+Requires-Dist: uipath-langchain>=0.0.106
